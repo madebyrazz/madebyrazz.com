@@ -1,0 +1,120 @@
+@font-face { font-family: 'Geist'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/geist.woff2) format('woff2'); }
+
+/* 07 — one narrow column, running text, lowercase */
+:root {
+  color-scheme: dark;
+  --bg: #000;
+  --ink: #efebe4;
+  --text: #b4afa6;
+  --dim: #6e6a63;
+  --line: #2a2926;
+  --f: 'Geist', -apple-system, system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 16px/1.6 var(--f);
+  text-transform: lowercase;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+h1, h2, p, figure { margin: 0; }
+
+/* mobile first: one phone-width column */
+.col {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 72px 24px 0;
+}
+section, .intro { margin-bottom: 44px; }
+section p + p { margin-top: 12px; }
+
+.intro { color: var(--ink); font-size: 17px; line-height: 1.75; }
+.intro h1 { font: inherit; font-weight: 700; }
+.intro strong { font-weight: 700; }
+
+/* the two photos sit inside the sentence, small and round */
+.face {
+  display: inline-block;
+  width: 1.7em; height: 1.7em;
+  margin: 0 0.12em 0 0.18em;
+  vertical-align: -0.5em;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: default;
+  transition: opacity .15s;
+}
+.face:hover, .face.on { opacity: .85; }
+.face:focus-visible { outline: 1px solid var(--ink); outline-offset: 2px; }
+
+h2 { font: 400 13px/1.6 var(--f); color: var(--dim); margin-bottom: 10px; }
+.k { color: var(--dim); margin-right: 2px; }
+.dim { color: var(--dim); }
+.role { color: var(--ink); }
+.say { color: var(--ink); }
+.yr { color: var(--dim); font-size: 0.85em; font-variant-numeric: tabular-nums; white-space: nowrap; margin-left: 4px; }
+
+
+
+/* hoverable project names: brighter, with a quiet dotted line */
+.p {
+  color: var(--ink);
+  text-decoration: underline dotted;
+  text-decoration-color: #5d5a54;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  cursor: default;
+  transition: text-decoration-color .15s;
+}
+a.p { cursor: pointer; }
+.p:hover, .p:focus-visible, .p.on { text-decoration-style: solid; text-decoration-color: var(--ink); outline: none; }
+
+.links a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
+.links a:hover { border-color: var(--ink); }
+
+footer {
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 16px;
+  padding: 18px 0 64px;
+  border-top: 1px solid var(--line);
+  font-size: 13px; color: var(--dim);
+}
+footer a { text-decoration: none; }
+footer a:hover { color: var(--ink); }
+.legal { display: flex; gap: 16px; }
+
+/* the small preview that follows the cursor */
+.peek {
+  position: fixed; left: 0; top: 0; z-index: 10;
+  width: 120px;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .16s ease;
+  will-change: transform;
+}
+.peek.on { opacity: 1; }
+.peek .frame {
+  overflow: hidden;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #1a1a18;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, .55);
+}
+.peek img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.peek p { display: inline-block; margin-top: 4px; padding: 2px 6px; border-radius: 4px; background: var(--bg); font-size: 12px; line-height: 1.4; color: var(--dim); }
+.peek p:empty { display: none; }
+
+/* desktop: labels on the left, text on the right, a comfortable reading width */
+@media (min-width: 860px) {
+  body { font-size: 18px; }
+  .col { max-width: 864px; padding: 120px 48px 0; }
+  .intro, section { margin-bottom: 56px; }
+  .intro { font-size: 20px; line-height: 1.75; }
+  section h2 { font-size: 14px; margin-bottom: 12px; }
+  section p + p { margin-top: 14px; }
+  .peek { width: 140px; }
+}
+

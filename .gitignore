@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# full-size original photos (the site uses the web versions in NN/img)
+_assets/
+
+# local editor / agent settings
+.claude/
