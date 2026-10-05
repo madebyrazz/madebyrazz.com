@@ -15,14 +15,14 @@ for (const id of ids) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Razz — madebyrazz.com</title>
+<title>${v.title ?? 'Razz — madebyrazz.com'}</title>
 <meta name="description" content="${v.hero ?? content.hero}">
 <meta name="theme-color" content="${v.theme}">
 ${v.fonts ? `<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?${v.fonts}&display=swap">
 ` : ''}${v.preload ? v.preload.map((f) => `<link rel="preload" href="${f}" as="font" type="font/woff2" crossorigin>
-`).join('') : ''}<link rel="stylesheet" href="style.css">
+`).join('') : ''}<link rel="stylesheet" href="style.css">${v.head ? '\n' + v.head : ''}
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>

@@ -1,5 +1,7 @@
 # madebyrazz.com
 
+Live: https://madebyrazz.com — the live version is `09/`, published to `docs/`. **Start with [HANDOFF.md](HANDOFF.md).**
+
 Personal homepage of Razz. Static site, no dependencies.
 
 - `content.mjs` — shared copy and image data

@@ -80,6 +80,21 @@ export default {
   preload: ['fonts/geist.woff2', 'fonts/caveat.woff2'],
   script: true,
   hero: HERO,
+  title: 'razz — editor, producer & creative',
+  head: [
+    '<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png">',
+    '<link rel="icon" type="image/png" sizes="512x512" href="img/favicon-512.png">',
+    '<link rel="apple-touch-icon" href="img/apple-touch-icon.png">',
+    '<meta property="og:type" content="website">',
+    '<meta property="og:url" content="https://madebyrazz.com/">',
+    '<meta property="og:title" content="razz — editor, producer & creative">',
+    '<meta property="og:description" content="i edit films and produce music for a living. in between, i build brands and vibecode.">',
+    '<meta property="og:image" content="https://madebyrazz.com/img/og.png">',
+    '<meta property="og:image:width" content="1200">',
+    '<meta property="og:image:height" content="630">',
+    '<meta name="twitter:card" content="summary_large_image">',
+    '<meta name="twitter:image" content="https://madebyrazz.com/img/og.png">',
+  ].join('\n'),
   render: (c) => {
     const [film, music, editing, code] = c.currently;
     const f = c.film, m = c.music, r = c.rippleedit, v = c.vibecoded;
