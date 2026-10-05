@@ -1,5 +1,5 @@
 // node build.mjs — renders every version from content.mjs into NN/index.html
-import { writeFileSync, existsSync } from 'node:fs';
+import { writeFileSync, existsSync, readFileSync, rmSync, mkdirSync, cpSync } from 'node:fs';
 import { content } from './content.mjs';
 
 const ids = ['07', '08', '09'];
@@ -65,3 +65,24 @@ ${versions.map((v) => `<a href="${v.id}/"><span>${v.id}</span><strong>${v.name}<
 `;
 writeFileSync('./index.html', overview);
 console.log('built overview');
+
+// ---------- publish: the live site for GitHub Pages lives in docs/ ----------
+// V09 becomes the homepage, next to the imprint and privacy pages. No review switcher, links fixed for the root.
+const LIVE = '09';
+rmSync('./docs', { recursive: true, force: true });
+mkdirSync('./docs', { recursive: true });
+for (const f of ['style.css', 'script.js']) if (existsSync(`./${LIVE}/${f}`)) cpSync(`./${LIVE}/${f}`, `./docs/${f}`);
+for (const d of ['img', 'fonts']) if (existsSync(`./${LIVE}/${d}`)) cpSync(`./${LIVE}/${d}`, `./docs/${d}`, { recursive: true });
+const page = readFileSync(`./${LIVE}/index.html`, 'utf8')
+  .replace('<script src="../shared/switcher.js" defer></script>\n', '')
+  .replaceAll('href="../imprint/"', 'href="imprint/"')
+  .replaceAll('href="../privacy/"', 'href="privacy/"');
+if (page.includes('../')) throw new Error('docs/index.html still points outside the site');
+writeFileSync('./docs/index.html', page);
+cpSync('./imprint', './docs/imprint', { recursive: true });
+cpSync('./privacy', './docs/privacy', { recursive: true });
+mkdirSync('./docs/shared', { recursive: true });
+cpSync('./shared/legal.css', './docs/shared/legal.css');
+writeFileSync('./docs/CNAME', 'madebyrazz.com\n');
+writeFileSync('./docs/.nojekyll', '');
+console.log(`published ${LIVE} to docs/`);

@@ -50,6 +50,98 @@ export const content = {
     },
   ],
 
+  // Short "magnifier" notes shown when hovering fabw, straightupglobal and rippleedit (V09). Draft copy, edit freely.
+  orgs: {
+    fabw: {
+      name: 'Film Academy Baden-Württemberg',
+      label: 'fabw',
+      logo: 'img/logo-fabw-badge.svg',
+      href: 'https://www.filmakademie.de',
+      text: 'Film school in Ludwigsburg, Germany. Its students have won Student Academy Awards, BAFTA Student Awards and more.',
+    },
+    sug: {
+      name: 'STRAIGHTUPGLOBAL',
+      label: 'straightupglobal',
+      logo: 'img/logo-sug-badge.jpg',
+      href: 'https://www.instagram.com/straightupglobal/',
+      text: 'Producer collective making samples that end up in songs with the biggest names in hip-hop.',
+    },
+    rippleedit: {
+      name: 'RippleEdit',
+      label: 'rippleedit',
+      logo: 'img/logo-rippleedit-badge.jpg',
+      href: 'https://ripple-edit.com',
+      text: 'Video editing services for the biggest music production creators and their content across social media.',
+    },
+  },
+
+  // Hover cards for the work section (V09). Draft copy, edit freely.
+  cards: {
+    hausAmHang: {
+      title: 'Halfway House',
+      text: 'Short film. In a youth detention facility in the Black Forest, the disciplined Jurek is thrown off balance by the new inmate Sascha. Directed by Konstantin Münzel, cinematography by Paul Ader, edited by me.',
+      img: 'img/haus-am-hang-graded.jpg',  // still: MDR / Paul Ader, highlights gently pulled down
+      href: 'https://youtu.be/LbID0HTj_wI',  // trailer (English title: Halfway House)
+    },
+    rippleeditSite: {
+      title: 'RippleEdit, portfolio website',
+      text: 'The brand’s business card: a clean portfolio with scroll effects that serve the story, and a direct way to send inquiries.',
+      img: 'img/logo-rippleedit-badge.jpg',
+      href: 'https://ripple-edit.com',
+    },
+    fukagawa: {
+      title: 'Fukagawa Fine Dining, website and brand',
+      text: 'Bringing the restaurant online the way it feels in person: a precise, warm room and the art of ikebana. Built for a close friend, the owner.',
+    },
+    sugStore: {
+      title: 'STRAIGHTUPGLOBAL, Shopify store',
+      text: 'A professional home with a clear brand identity that gives producers access to our samples.',
+      img: 'img/logo-sug-badge.jpg',
+      href: 'https://7b4b9b.myshopify.com',
+    },
+    rippleReview: {
+      title: 'RippleReview',
+      text: 'Client-internal tool for RippleEdit clients: Frame.io-inspired video review, sharing and revisions.',
+      img: 'img/logo-ripplereview-badge.jpg',
+    },
+    rippleLab: {
+      title: 'RippleLab',
+      text: 'Internal tool for RippleEdit: thumbnail ideation, packaging and preview.',
+      img: 'img/logo-ripplelab-badge.jpg',
+    },
+    // Songs: artist + monthly listeners first, then the story. Listener numbers from the STRAIGHTUPGLOBAL deck data (Aug 2026).
+    'HAUNTED BY FAME': {
+      title: 'Haunted by Fame',
+      text: 'Offset, 18.4M monthly listeners. The title track of his album Haunted by Fame, built on a sample of ours.',
+    },
+    'ONLY TIME': {
+      title: 'Only Time',
+      text: 'Gucci Mane, 19.7M monthly listeners. Built on a sample of ours.',
+    },
+    'GUCCI SPECIAL': {
+      title: 'Gucci Special',
+      text: 'Gucci Mane, 19.7M monthly listeners. A beat of ours that sat on a hard drive for two years before it got placed.',
+    },
+    // Creators: who they are, then their reach. Numbers checked on YouTube and Instagram, Oct 2026.
+    ProducerGrind: {
+      title: 'ProducerGrind',
+      text: 'Was the biggest podcast and hub for producers, with interviews with Metro Boomin, Zaytoven, Timbaland and more. 244K YouTube subscribers · 281K Instagram followers.',
+    },
+    MACSHOOTER: {
+      title: 'MACSHOOTER',
+      text: 'Producer and creator with credits for Future, Polo G, Young Thug and G Herbo. 69K YouTube subscribers · 51.8K Instagram followers.',
+    },
+    'Ayo Sim': {
+      title: 'Ayo Sim',
+      text: 'Platinum producer behind songs for Gunna, Lil Baby and Lil Durk. Started his content in late 2025 and runs it at a seriously high level. 4.67K YouTube subscribers · 13.4K Instagram followers.',
+    },
+    sugPacks: {
+      title: 'SUG Packs',
+      text: 'Internal tool for STRAIGHTUPGLOBAL: a smart library for our samples.',
+      img: 'img/logo-sugpacks-badge.jpg',
+    },
+  },
+
   workLabel: 'SELECTED WORK',
 
   film: {
