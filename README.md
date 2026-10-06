@@ -6,7 +6,7 @@ Personal homepage of Razz. Static site, no dependencies.
 
 - `content.mjs` — shared copy and image data
 - `07/`, `08/`, `09/` — design directions: `template.mjs` (markup), `style.css`, `script.js`, `img/`, `fonts/`
-- `imprint/`, `privacy/` — legal pages (drafts, placeholders still to fill in)
+- `imprint/`, `privacy/` — final legal pages
 - `shared/switcher.js` — review-only version switcher (keys 7–9, ←/→, H hides it)
 - `index.html` — overview of the directions
 

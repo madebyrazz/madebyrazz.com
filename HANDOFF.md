@@ -31,7 +31,7 @@ DNS at Strato: A `185.199.108.153` (Strato allows only one A record, that's fine
 - Two handwritten buttons ("what i currently do", "check out some of my work") open `<details>` sections. The arrow bends from right to down in sync with the opening (JS arc, 0.32 s, easeOutCubic = CSS `cubic-bezier(.33,1,.68,1)`).
 - Inside: label + small round image (`.ico`) + name. Image and name are one hover block, only the name is underlined. Hover shows a card (round image left, title + short text right) that follows the cursor. Hand cursor only on real links. All external links open in a new tab.
 - "currently" labels have underlines; the "work" section has none. vibecoding / vibecoded lines are fully grey, no underline.
-- Load animation: blocks arrive one by one (opacity + blur + slight push-down), timeline set via `--t` on each block. Hero first (0.1 s → 2.0 s), then a second softer wave (`.wave`, from 3.5 s). Arrows, handwriting and underlines are **not** drawn/written — they arrive with their block. Respect `prefers-reduced-motion`.
+- Load animation: the whole page arrives in **one smooth wave** (opacity + blur + slight push-down, 1 s each), top to bottom, 0.07 s apart (`--t` on each block, 0.05 s → 0.54 s). No pauses, no second wave — feedback was that the staged version felt slow. Arrows, handwriting and underlines are **not** drawn/written — they arrive with their block. Respect `prefers-reduced-motion`.
 
 ## Assets / sources
 

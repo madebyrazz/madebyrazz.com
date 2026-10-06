@@ -80,14 +80,14 @@ export default {
   preload: ['fonts/geist.woff2', 'fonts/caveat.woff2'],
   script: true,
   hero: HERO,
-  title: 'razz — editor, producer & creative',
+  title: 'razz - editor, producer & creative',
   head: [
     '<link rel="icon" type="image/png" sizes="64x64" href="img/favicon-64.png">',
     '<link rel="icon" type="image/png" sizes="512x512" href="img/favicon-512.png">',
     '<link rel="apple-touch-icon" href="img/apple-touch-icon.png">',
     '<meta property="og:type" content="website">',
     '<meta property="og:url" content="https://madebyrazz.com/">',
-    '<meta property="og:title" content="razz — editor, producer & creative">',
+    '<meta property="og:title" content="razz - editor, producer & creative">',
     '<meta property="og:description" content="i edit films and produce music for a living. in between, i build brands and vibecode.">',
     '<meta property="og:image" content="https://madebyrazz.com/img/og.png">',
     '<meta property="og:image:width" content="1200">',
@@ -106,21 +106,21 @@ export default {
 <main class="col">
 
 <header class="intro">
-  <h1 class="in" style="--t:.1s">${c.greeting}</h1>
-  <figure class="row then in" style="--t:.7s">
+  <h1 class="in" style="--t:.05s">${c.greeting}</h1>
+  <figure class="row then in" style="--t:.12s">
     <img class="p face" src="img/me-then.jpg" data-src="img/me-then.jpg" data-ratio="1" alt="${c.then.img.alt}" width="480" height="480" tabindex="0">
     <svg class="arrow" viewBox="0 0 48 28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path class="draw" d="M44 9 C 32 4, 18 8, 6 17"/><path class="draw tip" d="M15.5 17.5 L 6 17.5 L 10 8.5"/></svg>
     <figcaption class="hand">i've been creating<br>for as long as i can remember.</figcaption>
   </figure>
-  <figure class="row now in" style="--t:1.35s">
+  <figure class="row now in" style="--t:.19s">
     <figcaption class="hand">${c.now.line}</figcaption>
     <svg class="arrow" viewBox="0 0 48 28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path class="draw" d="M4 18 C 16 24, 30 22, 42 12"/><path class="draw tip" d="M39.5 21.5 L 42 12 L 32.5 11.5"/></svg>
     <img class="p face" src="img/me-now.jpg" data-src="img/me-now.jpg" data-ratio="1" alt="${c.now.img.alt}" width="640" height="640" tabindex="0">
   </figure>
-  <p class="today in" style="--t:2s">${['edit films', 'produce music', 'build brands', 'vibecode'].reduce((t, w, i) => t.replace(w, scribble(w, i)), HERO)}</p>
+  <p class="today in" style="--t:.26s">${['edit films', 'produce music', 'build brands', 'vibecode'].reduce((t, w, i) => t.replace(w, scribble(w, i)), HERO)}</p>
 </header>
 
-<details class="more in wave" style="--t:3.5s">
+<details class="more in" style="--t:.33s">
   ${opener('what i currently do')}
   <div class="body">
     <p>${lab('film:', 0)} full-time film editing student @ ${org(c.orgs.fabw)}, <span class="dim">one of the world's leading film schools.</span></p>
@@ -130,7 +130,7 @@ export default {
   </div>
 </details>
 
-<details class="more in wave" style="--t:3.62s">
+<details class="more in" style="--t:.4s">
   ${opener('check out some of my work')}
   <div class="body">
     <p><span class="k">one of the films i edited:</span> ${cardItem('halfway house', c.cards.hausAmHang, f.preview.src)}. <span class="dim">${f.awards.filter(([o]) => o !== 'Kurzsüchtig').slice(0, 2).map(([o, x]) => `${o}: ${x}`).join('. ')}. kurzsüchtig: ${list(kurz.map((x) => x.toLowerCase()))}. ${f.awards.at(-1).join(': ')}.</span></p>
@@ -149,12 +149,12 @@ export default {
   </div>
 </details>
 
-<section class="in wave" style="--t:3.74s">
+<section class="in" style="--t:.47s">
   <p class="say">${c.connect.text} ${c.connect.cta}</p>
   <p class="links">${c.connect.links.map((l) => `<span class="k">${l.label}</span> <a href="${l.href}"${l.href.startsWith('http') ? ' target="_blank" rel="noopener"' : ''}>${l.value}</a>`).join('<br>')}</p>
 </section>
 
-<footer class="in wave" style="--t:3.86s">
+<footer class="in" style="--t:.54s">
   <span class="legal"><a href="${c.footer.imprintHref}">${c.footer.imprint}</a><a href="${c.footer.privacyHref}">${c.footer.privacy}</a></span>
 </footer>
 

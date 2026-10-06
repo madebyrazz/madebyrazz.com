@@ -83,6 +83,6 @@ cpSync('./imprint', './docs/imprint', { recursive: true });
 cpSync('./privacy', './docs/privacy', { recursive: true });
 mkdirSync('./docs/shared', { recursive: true });
 cpSync('./shared/legal.css', './docs/shared/legal.css');
-writeFileSync('./docs/CNAME', 'madebyrazz.com\n');
+writeFileSync('./docs/CNAME', 'madebyrazz.com');
 writeFileSync('./docs/.nojekyll', '');
 console.log(`published ${LIVE} to docs/`);

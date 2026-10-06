@@ -292,11 +292,9 @@ body { position: relative; }
 /* ---------- first load: blocks drop in from slightly above, unblurring, top to bottom ---------- */
 .js .in {
   opacity: 0; filter: blur(10px); transform: translateY(-12px);
-  animation: arrive 1.2s cubic-bezier(.22,1,.36,1) var(--t, 0s) forwards;
+  animation: arrive 1s cubic-bezier(.22,1,.36,1) var(--t, 0s) forwards;
 }
 @keyframes arrive { to { opacity: 1; filter: none; transform: none; } }
-/* the second wave (buttons, contact, footer) settles in softer and slower, so it reads as one smooth movement */
-.js .in.wave { transform: translateY(-8px); animation-duration: 1.8s; animation-timing-function: cubic-bezier(.16,1,.3,1); }
 @media (prefers-reduced-motion: reduce) { .js .in { animation: none; opacity: 1; filter: none; transform: none; } }
 
 
