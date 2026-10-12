@@ -92,6 +92,7 @@ export const content = {
     fukagawa: {
       title: 'Fukagawa Fine Dining, website and brand',
       text: 'Bringing the restaurant online the way it feels in person: a precise, warm room and the art of ikebana. Built for a close friend, the owner.',
+      href: 'https://razzdiditagain.github.io/fukagawa-v7/',
     },
     sugStore: {
       title: 'STRAIGHTUPGLOBAL, Shopify store',
